@@ -1,0 +1,30 @@
+# See the documentation for more information:
+# https://packit.dev/docs/configuration/
+
+specfile_path: distro/aws-c-mqtt.spec
+
+# add or remove files that should be synced
+synced_files:
+    - distro/aws-c-mqtt.spec
+    - .packit.yaml
+
+# name in upstream package repository or registry (e.g. in PyPI)
+upstream_package_name: aws-c-imqtt
+# downstream (Fedora) RPM package name
+downstream_package_name: aws-c-mqtt
+
+jobs:
+  - job: copr_build
+    trigger: pull_request
+    targets:
+      - fedora-all
+    additional_repos:
+     - "copr://packit/packit-aws-playground"
+  - job: copr_build
+    trigger: commit
+    branch: main
+    targets:
+      - fedora-all
+    project: packit-aws-playground
+    list_on_homepage: True
+    preserve_project: True
