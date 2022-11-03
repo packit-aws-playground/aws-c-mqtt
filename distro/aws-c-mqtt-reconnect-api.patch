@@ -1,0 +1,11 @@
+diff -urN aws-c-mqtt-0.7.8-orig/include/aws/mqtt/client.h aws-c-mqtt-0.7.8/include/aws/mqtt/client.h
+--- aws-c-mqtt-0.7.8-orig/include/aws/mqtt/client.h	2021-09-21 23:27:06.000000000 +0000
++++ aws-c-mqtt-0.7.8/include/aws/mqtt/client.h	2022-01-20 20:40:54.188622651 +0000
+@@ -418,6 +418,7 @@
+  * \returns AWS_OP_SUCCESS if the connection has been successfully initiated,
+  *              otherwise AWS_OP_ERR and aws_last_error() will be set.
+  */
++AWS_MQTT_API
+ int aws_mqtt_client_connection_reconnect(
+     struct aws_mqtt_client_connection *connection,
+     aws_mqtt_client_on_connection_complete_fn *on_connection_complete,
