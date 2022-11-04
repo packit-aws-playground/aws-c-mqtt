@@ -6,8 +6,7 @@ Summary:        C99 implementation of the MQTT 3.1.1 specification
 License:        ASL 2.0
 URL:            https://github.com/awslabs/%{name}
 Source0:        %{url}/archive/v%{version}/%{name}-%{version}.tar.gz
-Patch0:         aws-c-mqtt-reconnect-api.patch
-Patch1:         aws-c-mqtt-cmake.patch
+Patch0:         aws-c-mqtt-cmake.patch
 
 BuildRequires:  gcc
 BuildRequires:  cmake
